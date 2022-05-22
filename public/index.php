@@ -14,4 +14,34 @@ $app->get('/', function (Request $request, Response $response, $args) {
     return $response;
 });
 
+
+$app->post('/login', function (Request $request, Response $response, $args) {
+    $phonenumber = $request->getParsedBody()['phonenumber'];
+    $password = $request->getParsedBody()['password'];
+    //$payload = json_encode(['hello' => 'world'], JSON_PRETTY_PRINT);
+    $response->getBody()->write($request->getParsedBody());
+    return $response->withHeader('Content-Type', 'application/json');
+    return $response;
+});
+
+
+$app->post('/login', function (Request $request, Response $response, $args) {
+    $firstname = $request->getParsedBody()['firstname'];
+    $lastname = $request->getParsedBody()['lastname'];
+    $phonenumber = $request->getParsedBody()['phonenumber'];
+    $password = $request->getParsedBody()['password'];
+    //$payload = json_encode(['hello' => 'world'], JSON_PRETTY_PRINT);
+    $response->getBody()->write($request->getParsedBody());
+    return $response->withHeader('Content-Type', 'application/json');
+    return $response;
+});
+
+$app->get('/get_profile', function (Request $request, Response $response, $args) {
+    $payload = json_encode(['hello' => 'world'], JSON_PRETTY_PRINT);
+    $response->getBody()->write($payload);
+    return $response->withHeader('Content-Type', 'application/json');
+    return $response;
+});
+
+
 $app->run();

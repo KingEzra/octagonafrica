@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="nav">
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/register">Register</router-link> | 
+      <router-link to="/">ViewProfile</router-link>
+  </div>
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue';
+// import LoginAuth from './components/auth/LoginAuth.vue';
+// import RegisterAuth from './components/auth/RegisterAuth.vue';
+// import ViewProfile from './components/ViewProfile.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+// export default {
+//   name: 'App',
+//   components: {
+//     //HelloWorld,
+//     LoginAuth,
+//     RegisterAuth,
+//     ViewProfile,
+//   },
+
+  
+// }
 </script>
 
 <style>
